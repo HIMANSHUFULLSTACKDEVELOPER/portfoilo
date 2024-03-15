@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        /* main */
+        .main {
+            width: 100vw;
+            height: 100vw;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* row1 */
+        .rone {
+            width: 100%;
+            height: 33%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+        }
+
+
+
+        .red {
+            background-color: red;
+            height: 100%;
+            width: 40%;
+        }
+
+        /* right */
+        .yellow {
+            background-color: yellow;
+            height: 100%;
+            width: 60%;
+        }
+
+        /* r2 */
+        .rtwo {
+            width: 100%;
+            height: 33%;
+            background-color: rgb(233, 152, 134);
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* left */
+        .green {
+            width: 33.33%;
+            height: 100%;
+            background-color: green;
+
+        }
+
+        /* middle */
+        .blue {
+            width: 33.33%;
+            height: 100%;
+            background-color: blue;
+
+        }
+
+        /* right */
+        .black {
+            width: 33.33%;
+            height: 100%;
+            background-color: black;
+
+        }
+
+        /* row3 */
+        .rthree {
+            width: 100%;
+            height: 33%;
+            background-color: skyblue;
+            flex-direction: row;
+        }
+
+        /* left */
+        .gray {
+            width: 50%;
+            height: 100%;
+            background-color: gray;
+        }
+
+        /* right */
+        .skyblue {
+            width: 50%;
+            height: 100%;
+
+
+
+        }
+        .styl{
+
+font-size: 55px;
+color: black;
+position: relative;
+animation-name: mymove;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+from {
+    left: 0px;
+    color: aqua;
+    font-size: 2px;
+}
+
+to {
+    left: 860px;
+    font-size: 70px;
+}
+}
+
+       
+    </style>
+</head>
+
+<body>
+    <h1 class="styl">LAYOUT </h1>
+    <main class="main">
+        <!-- 1 -->
+        <main class="rone">
+            <div class="red"></div>
+            <div class="yellow"></div>
+        </main>
+        <!-- 2 -->
+        <main class="rtwo">
+            <div class="green"></div>
+            <div class="blue"></div>
+            <div class="black"></div>
+        </main>
+        <!-- 3 -->
+        <main class="rthree">
+            <div class="gray"></div>
+            <div class="skyblue"></div>
+        </main>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+
+            height: 50VW;
+            width: 50vw;
+            flex-direction: column;
+            display: flex;
+            border-color: black;
+            border: solid;
+            margin-left: 25vw;
+            margin-right: 25vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+
+        .chessrow {
+            width: 100%;
+            height: 12.5%;
+            background-color: gray;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .white {
+            background-color: white;
+            height: 100%;
+            width: 12.5%;
+        }
+
+        .black {
+            background-color: black;
+            height: 100%;
+            width: 12.5%;
+        }
+
+        .images {
+            width: 5vw;
+            height: 6vw;
+            margin-left: 9px;
+            font-size: 22px;
+        }
+
+        .game {
+
+            font-size: 25px;
+            color: gray;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+                color: aqua;
+                font-size: 2px;
+            }
+
+            to {
+                left: 180px;
+                font-size: 30px;
+            }
+        }
+    </style>
+
+<body
+    style="justify-content: center; background-image: url(https://wallpaperaccess.com/full/3289425.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <h1 class="game">
+
+        ## CHESS BORD GAME ##
+    </h1>
+
+    <!-- main division  -->
+    <div class="container">
+        <div class="chessrow">
+            <!-- 1 row -->
+            <div class="white">
+                <img class="images" src="./rook.png">
+            </div>
+            <div class="black">
+                <img class="images" src="./knight.png">
+
+
+            </div>
+            <div class="white">
+                <img class="images" src="./bishop.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="./QUEEN.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./KING.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="https://www.pngmart.com/files/16/Chess-Pieces-PNG-File.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./knight.png">
+
+
+            </div>
+            <div class="black">
+                <img class="images" src="./rook.png">
+
+            </div>
+        </div>
+
+        <div class="chessrow">
+
+            <!-- 2 row -->
+            <div class="black">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="./pawn Background Removed.png">
+
+            </div>
+        </div>
+        <div class="chessrow">
+            <!-- 3 row -->
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+        </div>
+        <div class="chessrow">
+            <!-- 4row -->
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+        </div>
+        <div class="chessrow">
+            <!-- 5 row -->
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+        </div>
+
+        <div class="chessrow">
+            <!-- 6row -->
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+            <div class="black">
+
+            </div>
+            <div class="white">
+
+            </div>
+        </div>
+        <div class="chessrow">
+            <!-- 7 row -->
+            <div class="white">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143290/isolated/preview/3dc0e132939ad9ebff880b64637ea820-pawn-chess-figure-white-by-vexels.png">
+
+            </div>
+        </div>
+        <div class="chessrow">
+
+            <!-- 8 row -->
+            <div class="black">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143224/isolated/preview/be2b821fd2c442cd1a7e26bc086ba091-rook-chess-figure-white-by-vexels.png">
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://pics.clipartpng.com/idownload-image.php?file=Knight_White_Chess_Piece_PNG_Clip_Art-2756.png">
+
+            </div>
+            <div class="black">
+                <img class="images" src="https://www.pngplay.com/wp-content/uploads/15/Chess-Bishop-PNG-Photos.png">
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://pics.clipartpng.com/idownload-image.php?file=King_White_Chess_Piece_PNG_Clip_Art-2755.png">
+
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://cdn4.iconfinder.com/data/icons/chess-icons/200/chess_white_queen-1024.png">
+
+            </div>
+            <div class="white">
+                <img class="images" src="https://www.pngplay.com/wp-content/uploads/15/Chess-Bishop-PNG-Photos.png">
+
+            </div>
+            <div class="black">
+                <img class="images"
+                    src="https://pics.clipartpng.com/idownload-image.php?file=Knight_White_Chess_Piece_PNG_Clip_Art-2756.png">
+
+            </div>
+            <div class="white">
+                <img class="images"
+                    src="https://images.vexels.com/media/users/3/143224/isolated/preview/be2b821fd2c442cd1a7e26bc086ba091-rook-chess-figure-white-by-vexels.png">
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <a style="font-size: 55px; color: aqua;text-align: end;" href="./layoutchess.html">LAYOUT</a>
+
+
+
+</body>
+
+</html>

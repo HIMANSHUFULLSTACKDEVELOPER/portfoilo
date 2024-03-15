@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* main box */
+        .main-container {
+            background-color: gray;
+            width: 70vw;
+            margin-left: 20vw;
+            height: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 20px;
+            box-shadow: 0px 0px 90px white;
+            margin-top: 5px;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 45px;
+            aspect-ratio: 1;
+            --c: no-repeat linear-gradient(#000 0 0);
+            background:
+                var(--c) 0% 50%,
+                var(--c) 50% 50%,
+                var(--c) 100% 50%;
+            background-size: 20% 100%;
+            animation: l1 1s infinite linear;
+        }
+
+        @keyframes l1 {
+            0% {
+                background-size: 20% 100%, 20% 100%, 20% 100%
+            }
+
+            33% {
+                background-size: 20% 10%, 20% 100%, 20% 100%
+            }
+
+            50% {
+                background-size: 20% 100%, 20% 10%, 20% 100%
+            }
+
+            66% {
+                background-size: 20% 100%, 20% 100%, 20% 10%
+            }
+
+            100% {
+                background-size: 20% 100%, 20% 100%, 20% 100%
+            }
+        }
+
+        /* input box */
+        .input-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* display box */
+        .display {
+            background-color: whitesmoke;
+            width: 90%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 45px;
+            padding: 20px;
+            margin-left: 30px;
+        }
+
+        .input-box {
+            height: 44px;
+            width: 80%;
+            font-size: 22px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.701);
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* button */
+        .button {
+            width: 80%;
+            margin: 20px;
+            height: 44px;
+            background-color: navy;
+            font-size: 22px;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 26px;
+        }
+
+        body {
+            background: url(https://media.istockphoto.com/id/1495503758/vector/sunburst-and-coin-background-material.jpg?s=612x612&w=is&k=20&c=UdjW6xj8y67RFYY5gigBScUEs39pATKMBUuZr1uFwpo=)no-repeat center/cover;
+        }
+    </style>
+    <script>
+        // we have 100 rup
+        let coins = 100;
+        // start playing
+        function startplay() {
+            document.getElementById("loader").style.display = "block";
+            // timeout on it
+            setTimeout(() => {
+                startLottery();
+            }, 1000);
+        }
+
+        // lottery start
+        function startLottery() {
+            document.getElementById("loader").style.display = "none";
+            // formula use 
+            let output = parseInt((Math.random() * 100) / 10);
+            // bet  coin on it
+            let betCoins = document.getElementById("coins").value;
+            //   bet number 
+            let betNumber = document.getElementById("input").value;
+
+            if (betCoins <= 0 || betNumber < 0) {
+                document.getElementById("display-text").innerHTML = "<br/> your coins is " + coins;
+                return;
+            }
+            if (betCoins == betNumber) {
+                document.getElementById("display-text").innerHTML = "check  your bet its more than coins   ";
+                return;
+            }
+            if (betCoins == betNumber) {
+                coins += betCoins * 9;
+            } else {
+                coins -= betCoins;
+            }
+
+            document.getElementById("display-text").innerHTML =
+                "Loottery Number =" + output + "<br/>your coins coins is" + coins;
+            document.getElementById("display-text");
+
+
+
+
+        }
+
+        window.onload = function () {
+            startplay();
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1
+        style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid white;height: 70PX;width: 370PX; text-align: center; background-color: aquamarine; box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX; margin-left: 700px;">
+        lottery game </h1> <br>
+
+    <body style="margin: 0px">
+        <div class="main-container">
+            <div class="display" id="display">
+                <h1 class="display-text" id="display-text"></h1>
+                <div id="loader" class="loader"></div>
+            </div>
+            <div class="input-container">
+                <input id="input" type="number" class="input-box" placeholder="Bet number" />
+                <input id="coins" type="number" class="input-box" placeholder="coins" />
+
+                <button class="button" onmouseenter="startplay()">click me</button>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>
+
+</body>
+
+</html>

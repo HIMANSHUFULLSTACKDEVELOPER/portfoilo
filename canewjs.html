@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- styling -->
+    <style>
+        .main {
+            background-color: #CCD3CA;
+            height: 500px;
+            width: 400px;
+        }
+
+        .top {
+            background-color: #FFBE98;
+            height: 30%;
+            width: 100%;
+        }
+
+
+        button {
+            text-align: center;
+            font-size: 22px;
+            color: black;
+            background-color: bisque;
+
+        }
+
+        .style {
+            background-image: url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/powerpoint-math-for-kids-background-design-template-9c7101e6f62f51589b70148f650f4f6e_screen.jpg?ts=1701318011);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .st {
+            padding-left: 455px;
+
+        }
+
+        .ben {
+            font-size: 43px;
+            background-color: azure;
+            text-align: center;
+            border-radius: 42vh;
+        }
+
+        .styl {
+
+            text-align: center;
+        }
+    </style>
+    <script>
+        function add() {
+            let firstNumber = document.getElementById("number-one").value;
+            let secondNumber = document.getElementById("number-two").value;
+            let total = Number(firstNumber) + Number(secondNumber)
+            document.getElementById("display").innerHTML = "ADDITION IS " + total; document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function sub() {
+            let firstNumber = document.getElementById("number-one").value;
+            let secondNumber = document.getElementById("number-two").value;
+            let total = Number(firstNumber) - Number(secondNumber)
+            document.getElementById("display").innerHTML = "ADDITION IS " + total; document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function mul() {
+            let firstNumber = document.getElementById("number-one").value;
+            let secondNumber = document.getElementById("number-two").value;
+            let total = Number(firstNumber) * Number(secondNumber)
+            document.getElementById("display").innerHTML = "ADDITION IS " + total; document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function div() {
+            let firstNumber = document.getElementById("number-one").value;
+            let secondNumber = document.getElementById("number-two").value;
+            let total = Number(firstNumber) / Number(secondNumber)
+            document.getElementById("display").innerHTML = "ADDITION IS " + total; document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+
+    </script>
+</head>
+
+<body class="style">
+
+    <div class="st">
+        <div class="main">
+
+            <div class="top">
+                <h1 id="display">0</h1>
+            </div>
+
+            <!--  -->
+            <input type="text" id="number-one" value="" style="height: 40px; width: 150;">
+            <input type="text" id="number-two" value="" style="height: 40px; width: 150;">
+            <!--  -->
+
+            <div class="styl"><button class="ben" onclick="add()">Add</button></div>
+            <br>
+            <div class="styl"><button class="ben" onclick="sub()">sub</button></div>
+            <br>
+            <div class="styl"><button class="ben" onclick="mul()">mul</button></div>
+            <br>
+            <div class="styl"><button class="ben" onclick="div()">div</button></div>
+            <br>
+
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

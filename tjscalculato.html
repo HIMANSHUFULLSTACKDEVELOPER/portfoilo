@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .bhai {
+            min-height: 120vh;
+            max-width: 130%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my {
+            background-image: url(https://wallpapercave.com/wp/wp2497566.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        .my {
+
+            font-size: 25px;
+            color: black;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            border: 2px sandybrown;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+                color: aqua;
+                font-size: 2px;
+            }
+
+            to {
+                left: 2160px;
+                font-size: 60px;
+            }
+        }
+
+        .calculator {
+            padding: 16px;
+            box-shadow: 0 0 25px black;
+            border: 2px solid rgb(116, 114, 114);
+            border-radius: 17px;
+            background-color: white;
+
+        }
+
+        .display {
+            width: 530px;
+            height: 90px;
+            padding: 20px;
+            border: none;
+            outline: none;
+            margin: 10px;
+            background: gray;
+            color: black;
+            font-size: 50px;
+            font-weight: 200;
+            text-align: right;
+            cursor: pointer;
+        }
+
+
+        button {
+            width: 70px;
+            height: 50px;
+            margin: 10px;
+            background: rgb(62, 62, 60);
+            color: black;
+            font-size: 32px;
+            font-weight: 600;
+            border: 3px solid gray;
+            outline-offset: 3px;
+            border-radius: 38px;
+        }
+
+        button:active {
+            background: black;
+
+        }
+
+        .opr {
+            color: #fbff00;
+            background-color: burlywood;
+            font-weight: 700px;
+        }
+
+        #ecc {
+            background: orangered;
+            font-weight: 900px;
+        }
+
+        .mypage {
+
+            font-size: 15px;
+            color: black;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            border: 2px sandybrown;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 2160px;
+                color: aqua;
+                font-size: 2px;
+            }
+
+            to {
+                left: 0px;
+                font-size: 30px;
+            }
+        }
+    </style>
+    <script>
+        function typing(pass) {
+
+            let x = pass;
+
+            document.getElementById("inputbox").innerHTML = pass
+
+        }
+    </script>
+</head>
+
+
+<body class="my">
+    <h1 class="mypage">##CALCULATOR##</h1>
+    <div class="bhai">
+
+
+        <div class="calculator">
+            <div class="display">
+                <h1 type="text" id="inputbox" value="" style="font-size: smaller;">
+            </div>
+            <!--  -->
+            <div class="row">
+                <button type="button" class="opr" onclick="typing(AC)">AC</button>
+                <button type="button" class="opr" onclick="typing(DEL)">DEL</button>
+                <button type="button" class="opr" onclick="typing(%)">%</button>
+                <button type="button" class="opr" onclick="typing(/)">/</button>
+            </div>
+            <!--  -->
+            <div class="row">
+                <button type="button" onclick="typing(7)">7</button>
+                <button type="button" onclick="typing(8)">8</button>
+                <button type="button" onclick="typing(9)">9</button>
+                <button type="button" class="opr" onclick="typing(*)">*</button>
+            </div>
+            <!--  -->
+            <div class="row">
+                <button type="button" onclick="typing(4)">4</button>
+                <button type="button" onclick="typing(5)">5</button>
+                <button type="button" onclick="typing(6)">6</button>
+                <button type="button" class="opr" onclick="typing(+)">+</button>
+            </div>
+            <!--  -->
+            <div class="row">
+                <button type="button" onclick="typing(1)">1</button>
+                <button type="button" onclick="typing(2)">2</button>
+                <button type="button" onclick="typing(3)">3</button>
+                <button type="button" class="opr" onclick="typing(-)">-</button>
+            </div>
+            <!--  -->
+            <div class="row">
+                <button type="button" id="fff" onclick="typing(+/-)">+/- </button>
+                <button type="button" onclick="typing(0)">0</button>
+                <button type="button" onclick="typing(.)">.</button>
+                <button type="button" id="ecc" onclick="typing(=)">=</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    
+</body>
+
+</html>
