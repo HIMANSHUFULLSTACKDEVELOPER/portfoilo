@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Checker</title>
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #779f07;
+        }
+
+        /* Styling for the container */
+        .container {
+            max-width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: #19657e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 123px;
+            box-shadow: 0px 0px 33px white;
+            border-radius: 30px;
+        }
+
+        /* Styling for the title */
+        h1 {
+            text-align: center;
+            font-size: 55px;
+        }
+
+        /* Styling for the label */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 33px;
+            border-radius: 30px;
+        }
+
+        /* Styling for the result */
+        #result {
+            text-align: center;
+            font-size: 38px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Title -->
+    <h1
+        style="color: black; text-align: center; font-size: 65px; font-weight: 700; margin-top: 80px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900;">
+        Vowel Checker </h1>
+
+    <div class="container">
+        <br><br>
+        <!-- Prompt for user input -->
+        <label for="alphabet" style="font-size: 43px;text-align: center;">Enter an alphabet:</label>
+        <br><br>
+        <!-- Input field -->
+        <input type="text" id="alphabet" maxlength="1" oninput="checkVowel()">
+        <!-- Result display -->
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // JavaScript function to check if the entered alphabet is a vowel
+        function checkVowel() {
+            var alphabet = document.getElementById('alphabet').value.toLowerCase();
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            var resultDiv = document.getElementById('result');
+
+            if (alphabet.length === 1 && /^[a-zA-Z]+$/.test(alphabet)) {
+                if (vowels.includes(alphabet)) {
+                    resultDiv.textContent = alphabet.toUpperCase() + " is a vowel.";
+                } else {
+                    resultDiv.textContent = alphabet.toUpperCase() + " is not a vowel.";
+                }
+            } else {
+                resultDiv.textContent = "Please enter a single alphabet character.";
+            }
+        }
+    </script>
+</body>
+
+</html>

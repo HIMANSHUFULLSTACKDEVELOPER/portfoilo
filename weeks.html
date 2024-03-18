@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Day of the Week</title>
+    <!-- Internal CSS -->
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: blanchedalmond;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 36px;
+            width: 400px;
+            border-radius: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 36px;
+            cursor: pointer;
+            background-color: aquamarine;
+            border-radius: 30px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 48px;
+            border-radius: 20px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 111px;
+            border-radius: 30px;
+            background: rgb(51, 210, 30);
+            width: 633px;
+            height: 433px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 0px 38px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Heading -->
+    <h1
+        style="color: black; text-align: center; font-size: 65px; font-weight: 700; margin-top: 80px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        CHECK DAY</h1>
+
+    <!-- Main container -->
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <!-- Input field -->
+        <input type="number" id="inputNumber" placeholder="Enter a number (1-7)">
+        <br>
+        <br><br>
+        <!-- Button to trigger function -->
+        <button onclick="showDay()">Show Day</button>
+        <!-- Result display -->
+        <div id="result"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript function to show day
+        function showDay() {
+            // Get input value
+            var inputNumber = document.getElementById("inputNumber").value;
+            // Get result element
+            var result = document.getElementById("result");
+
+            // Convert input to integer
+            inputNumber = parseInt(inputNumber);
+
+            // Check if the input is valid
+            if (inputNumber >= 1 && inputNumber <= 7) {
+                var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',];
+                // Display result
+                result.textContent = " DAY IS TODAY " + days[inputNumber - 1] + ".";
+            } else {
+                // Display error message if input is invalid
+                result.textContent = "Please enter a number between 1 and 7.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

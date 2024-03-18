@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the webpage -->
+  <title>Number Positivity Checker</title>
+  
+  <!-- CSS styles for the webpage -->
+  <style>
+    /* Global styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Container styling */
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      height: 300px;
+      background-color: aquamarine;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.703);
+    }
+
+    /* Heading styling */
+    h1 {
+      text-align: center;
+    }
+
+    /* Label styling */
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* Input field styling */
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      font-size: 44px;
+    }
+
+    /* Result display styling */
+    #results {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 44px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body style="background-color: bisque;">
+    <!-- Heading -->
+    <h1 style="font-size: 55px;font-family: Verdana, Geneva, Tahoma, sans-serif; color: black;"> number is  <br> positive & negative </h1>
+  
+  <!-- Container for input field and result display -->
+  <div class="container">
+    <!-- Label for input field -->
+    <label for="number1" style="font-size: 33px;">Enter a number:</label>
+    <br>
+    <br>
+    <!-- Input field -->
+    <input type="number" id="number1" oninput="checkPositivity()">
+    <!-- Div to display results -->
+    <div id="results"></div>
+  </div>
+
+  <!-- JavaScript function to check positivity -->
+  <script>
+    function checkPositivity() {
+      // Retrieve the entered number
+      var number = parseInt(document.getElementById('number1').value);
+      // Get the results div element
+      var resultsDiv = document.getElementById('results');
+      // Clear previous results
+      resultsDiv.innerHTML = '';
+
+      // Check if the entered value is a number
+      if (!isNaN(number)) {
+        // If number is greater than 0, it's positive
+        if (number > 0) {
+          resultsDiv.innerHTML = 'The number is positive.';
+        } 
+        // If number is less than 0, it's negative
+        else if (number < 0) {
+          resultsDiv.innerHTML = 'The number is negative.';
+        } 
+        // If number is 0, it's neither positive nor negative
+        else {
+          resultsDiv.innerHTML = 'The number is zero, which is neither positive nor negative.';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

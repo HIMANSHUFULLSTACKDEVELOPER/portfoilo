@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baby name</title>
+    <style>
+        /* CSS for styling */
+        .alphabet-container {
+            margin-top: 20px;
+            font-size: 44px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .alphabet {
+            display: inline-block;
+            margin: 5px;
+            font-size: 44px;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        .box {
+            text-align: center;
+            width: 700px;
+            height: 650px;
+            background-color: rgb(255, 255, 255);
+            margin-left: 450px;
+            margin-top: 140px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 41px rgb(0, 0, 0);
+        }
+
+        #letterInput {
+            width: 500px;
+            height: 100px;
+            font-size: 44px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(232, 232, 232);">
+   
+    <div class="box">
+        <br>
+        <br>
+        <h1
+            style="font-size: 53px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: oblique;">
+            Enter Alphabet</h1>
+        <input type="text" id="letterInput" placeholder="Enter a letter" oninput="displayName()">
+        <br>
+        <br>
+
+        <button style="font-size: 27px;  width: 200px;
+        height: 50px; border-radius: 20px;background-color: aquamarine;" onclick="displayBoysNames()">Boys
+            Names</button>
+        <button style="font-size: 27px;  width: 200px;
+        height: 50px; border-radius: 20px;background-color: aquamarine;" onclick="displayGirlsNames()">Girls
+            Names</button>
+
+        <div id="name-container" class="alphabet-container"></div>
+    </div>
+    <script>
+        // JavaScript function to display boy names based on input letter
+        function displayBoysNames() {
+            displayNames('boys');
+        }
+
+        // JavaScript function to display girl names based on input letter
+        function displayGirlsNames() {
+            displayNames('girls');
+        }
+
+        // JavaScript function to display names based on input letter and gender
+        function displayNames(gender) {
+            const letterInput = document.getElementById('letterInput').value.toUpperCase();
+            const nameContainer = document.getElementById('name-container');
+            nameContainer.innerHTML = ''; // Clear previous content
+
+            // Mapping of letters to names
+            const names = {
+                'A': {
+                    'boys': 'ayush, aryan, aman, Aadi, Aarav, Aarnav, Ananya, Aditya, Anika, Akash',
+                    'girls': 'Aarohi, Aadhya, Aaradhya, Aaravi, Aarna, Aanya, Aahana, Aashi, Aahana, Ananya'
+                },
+                'B': {
+                    'boys': 'Baabul, Bhavya, Bhagat, Brijesh, Barkha, Bhuvan, Bimal, Bhavana, Bhaskar, Babita',
+                    'girls': 'Bhoomi, Bhavna, Bhumi, Bhakti, Bhavana, Bhargavi, Bhadra, Bhagirathi, Bhanvi, Bhavana'
+                },
+                'C': {
+                    'boys': 'Chetan, Chirag, Chinmay, Charu, Chaitanya, Chandni, Chhavi, Chandra, Chandan, Charul',
+                    'girls': 'Chahat, Chanchal, Charulata, Charvi, Chitra, Chandni, Chhavi, Chandana, Chaitali, Chavi'
+                },
+                'D': {
+                    'boys': 'Divya, Dhruv, Danish, Disha, Dinesh, Deepak, Diksha, Devansh, Darshan, Diya',
+                    'girls': 'Daksha, Damini, Deepika, Devika, Dhriti, Divya, Dolly, Dipika, Disha, Diksha'
+                },
+                'E': {
+                    'boys': 'Ekta, Eshaan, Eknath, Esha, Eshan, Eshita, Eshwar, Ekansh, Eshani, Eesha',
+                    'girls': 'Ekta, Eshita, Esha, Eshwari, Eshika, Ekanshi, Eshani, Eshana, Eshika, Eesha'
+                },
+                'F': {
+                    'boys': 'Farhan, Firoz, Faizan, Faisal, Fariha, Farah, Fathima, Faiza, Faris, Fida',
+                    'girls': 'Farida, Fiza, Firdaus, Fatima, Fariha, Faiza, Fathima, Fauzia, Faria, Falak'
+                },
+                'G': {
+                    'boys': 'Gaurav, Gautam, Gopal, Garima, Gitanjali, Geeta, Gauri, Gopal, Gunjan, Ganesh',
+                    'girls': 'Garima, Gauri, Gayatri, Gopika, Gurleen, Ganga, Gargi, Grishma, Gulab, Gurpreet'
+                },
+                'H': {
+                    'boys': 'Harsh, Hitesh, Himanshu, Harshita, Hema, Hina, Heena, Hira, Hansika, Hanuman',
+                    'girls': 'Harshita, Hina, Heena, Hira, Hansika, Harleen, Himani, Hetal, Henna, Harsha'
+                },
+                'I': {
+                    'boys': 'Ishaan, Ishita, Irfan, Inder, Indra, Inayat, Ishan, Ila, Isha, Ishani',
+                    'girls': 'Ishani, Isha, Indira, Indrani, Ishita, Ipsita, Inaaya, Ishika, Indu, Ilika'
+                },
+                'J': {
+                    'boys': 'Jatin, Jaya, Jasleen, Jhanvi, Jyoti, Jaya, Jhanvi, Jignesh, Jheel, Jia',
+                    'girls': 'Jhanvi, Jaya, Jasleen, Jheel, Jiya, Jyoti, Jhansi, Jhanavi, Jui, Jigna'
+                },
+                'K': {
+                    'boys': 'Kabir, Kavya, Kriti, Karan, Kirti, Khushi, Kunal, Komal, Kirtan, Kirtika',
+                    'girls': 'Kavita, Kirti, Komal, Khushi, Krisha, Kamini, Kashish, Kajal, Kalpana, Kanika'
+                },
+                'L': {
+                    'boys': 'Lakshay, Lata, Lavanya, Lavleen, Lipika, Latika, Laxmi, Lekha, Luv, Lakshya',
+                    'girls': 'Lavanya, Lakshmi, Leela, Lalita, Latika, Lata, Lavina, Laxmi, Lekha, Lopa'
+                },
+                'M': {
+                    'boys': 'Manish, Meera, Mohan, Mohit, Mansi, Meenakshi, Mahima, Mitali, Maya, Manisha',
+                    'girls': 'Meera, Mohini, Mamta, Manju, Malini, Madhu, Meenakshi, Minakshi, Mohana, Megha'
+                },
+                'N': {
+                    'boys': 'Neha, Naveen, Nikita, Nisha, Nitin, Nidhi, Namita, Nehal, Niharika, Nandini',
+                    'girls': 'Neha, Nisha, Nidhi, Naina, Neetu, Nisha, Navya, Nandini, Nitya, Nikita'
+                },
+                'O': {
+                    'boys': 'Om, Ojas, Oishi, Ovi, Omkar, Ojaswi, Oviya, Oishi, Omprakash, Ojaswini',
+                    'girls': 'Ojaswini, Oviya, Oishi, Ojasvi, Oorja, Ovi, Oli, Oormila, Omisha, Opal'
+                },
+                'P': {
+                    'boys': 'Pranav, Priya, Pratik, Pooja, Pranjal, Parul, Priti, Prisha, Priyanka, Prachi',
+                    'girls': 'Prisha, Pooja, Priyanka, Priti, Prachi, Priya, Parul, Pragya, Pranali, Pratibha'
+                },
+                'Q': {
+                    'boys': 'Qamar, Quasar, Qasim, Qais, Qadira, Qudsiya, Quratulain, Qaiser, Qazi, Quin',
+                    'girls': 'Quratulain, Qadira, Qudsiya, Quratulain, Qandeel, Qamar, Quasim, Qandeel, Qubra, Qurratulain'
+                }, 'R': {
+                    'boys': 'Rahul, Ritu, Rajesh, Rohit, Renu, Reena, Rashi, Riddhi, Riya, Rahul',
+                    'girls': 'Riya, Rashi, Rina, Ritu, Rhea, Rekha, Riyaan, Rani, Ritika, Radhika'
+                },
+                'S': {
+                    'boys': 'Sachin, Swati, Sneha, Sumit, Suraj, Sunita, Shivani, Shweta, Sakshi, Sonam',
+                    'girls': 'Swati, Sneha, Sunita, Sakshi, Sonam, Shreya, Shivani, Sushma, Simran, Sanya'
+                },
+                'T': {
+                    'boys': 'Tanmay, Tanya, Tarun, Tushar, Trisha, Tanuja, Tanishq, Taniya, Tia, Tisha',
+                    'girls': 'Tanya, Tanisha, Tanvi, Trisha, Tina, Tanuja, Tia, Twinkle, Trupti, Tripti'
+                },
+                'U': {
+                    'boys': 'Uday, Urvashi, Umesh, Urvi, Upasana, Udita, Utkarsh, Usha, Urmila, Uzma',
+                    'girls': 'Urvashi, Urvi, Usha, Upasana, Udita, Uma, Umaima, Urja, Urmila, Ujwala'
+                },
+                'V': {
+                    'boys': 'Vikram, Varun, Vidya, Vaibhav, Vinita, Veer, Vishal, Vishakha, Varsha, Vandana',
+                    'girls': 'Vidya, Vaishali, Varsha, Vandana, Vinita, Vibha, Veena, Vaidehi, Vani, Vishakha'
+                },
+                'W': {
+                    'boys': 'Waseem, Wafa, Waqar, Wajid, Waheeda, Wasiq, Wamiq, Wamiq, Wali, Wamiq',
+                    'girls': 'Wafa, Waheeda, Wajiha, Wajida, Wamika, Warisha, Warda, Wazir, Widaad, Wajiha'
+                },
+                'X': {
+                    'boys': 'Xavier, Xyla, Xander, Xenia, Xena, Xara, Xara, Xyla, Xanthus, Xzavier',
+                    'girls': 'Xena, Xara, Xenia, Xyla, Xyla, Xanthia, Xara, Xara, Xyla, Xina'
+                },
+                'Y': {
+                    'boys': 'Yash, Yamini, Yuvraj, Yashika, Yuvika, Yuvan, Yukta, Yusra, Yuvan, Yasmine',
+                    'girls': 'Yamini, Yuvika, Yashika, Yusra, Yashvi, Yashoda, Yashita, Yojana, Yashasvi, Yara'
+                },
+                'Z': {
+                    'boys': 'Zain, Zoya, Zara, Zeba, Zia, Zohaib, Zayn, Zeba, Zaina, Zayna',
+                    'girls': 'Zoya, Zara, Zeba, Zara, Zahra, Zainab, Zenobia, Zaynab, Zaina, Zara'
+                }
+
+
+            };
+
+            // Display the corresponding names if available, otherwise display an empty box
+            const namesByGender = names[letterInput][gender] || '';
+            const nameList = namesByGender.split(', ');
+            nameList.forEach(name => {
+                const div = document.createElement('div');
+                div.textContent = name;
+                div.className = 'alphabet';
+                nameContainer.appendChild(div);
+            });
+        }
+    </script>
+</body>
+
+</html>
