@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Player</title>
+  <style>
+    /* CSS styles */
+  
+
+    .bottom button {
+      margin: 7px;
+     
+    }
+
+    .box {
+      margin: 5px;
+      background-color: rgba(0, 255, 255, 0);
+      height: 500px;
+      width: 900px;
+      border-radius: 80px;
+      text-align: center;
+      margin-left: 600px;
+      margin-top: 300px;
+    }
+    body {
+            background-image: url("https://www.wallpapertip.com/wmimgs/71-713207_concert-wallpapers-party-wallpaper-hd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+  </style>
+</head>
+
+<body>
+  <!-- HTML -->
+  <div class="box">
+    <div class="main-container">
+      <br> <br>
+      <div class="top">
+        <br><br>
+        <audio id="audio" controls style="height: 80px;width: 400px;">
+          <source src="song1.mp3" type="audio/mpeg">
+          <source src="song2.mp3" type="audio/mpeg">
+          <source src="song3.mp3" type="audio/mpeg">
+          <source src="song4.mp3" type="audio/mpeg">
+          <source src="song5.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="bottom">
+        <br><br>
+        <button id="previous"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.163);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.527); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Previous</button>
+        <button id="playPause"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.171);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.552); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Play</button>
+        <button id="next"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.168);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.558); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Next</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    // JavaScript
+    document.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('audio');
+      const playPauseButton = document.getElementById('playPause');
+      const previousButton = document.getElementById('previous');
+      const nextButton = document.getElementById('next');
+
+      const songs = [
+        'song1.mp3',
+        'song2.mp3',
+        'song3.mp3',
+        'song4.mp3',
+        'song5.mp3'
+      ];
+      let currentSongIndex = 0;
+
+      function playPause() {
+        if (audio.paused) {
+          audio.play();
+          playPauseButton.textContent = 'Pause';
+        } else {
+          audio.pause();
+          playPauseButton.textContent = 'Play';
+        }
+      }
+
+      function playNext() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        audio.src = songs[currentSongIndex];
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+      }
+
+      function playPrevious() {
+        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        audio.src = songs[currentSongIndex];
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+      }
+
+      playPauseButton.addEventListener('click', playPause);
+      nextButton.addEventListener('click', playNext);
+      previousButton.addEventListener('click', playPrevious);
+    });
+  </script>
+</body>
+
+</html>
