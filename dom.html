@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- link -->
+  <link rel="stylesheet" href="./dom.css">
+  <script src="./dom.js"></script>
+</head>
+<!-- linkj -->
+
+<body style="margin: 0" onload="callThisFunction()">
+  <div class="main-container">
+    <div class="left-container">
+      <!-- how many box -->
+      <h1 style="color: rgb(0, 0, 0)" id="count">1</h1>
+      <!-- button 1 -->
+      <button id="button-one" class="plus-button" onclick="add()" onmouseover="changeButtonColor()">
+        ADD box
+      </button>
+      <!-- botton2 -->
+      <button class="minus-button" onclick="remove()">REMOVE box</button>
+    </div>
+    <!-- right box -->
+    <div id="right-container" class="right-container_cl">
+      <div class="brick"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

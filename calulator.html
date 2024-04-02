@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        /* all  */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+        }
+/* box */
+        .box {
+            min-height: 120vh;
+            max-width: 130%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .my {
+            background-image: url(https://wallpapercave.com/wp/wp2497566.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+/* animation */
+        .my {
+
+            font-size: 25px;
+            color: black;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            border: 2px sandybrown;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+                color: aqua;
+                font-size: 2px;
+            }
+
+            to {
+                left: 2160px;
+                font-size: 60px;
+            }
+        }
+/* cal sty */
+        .calculator {
+            padding: 16px;
+            box-shadow: 0 0 25px black;
+            border: 2px solid rgb(116, 114, 114);
+            border-radius: 17px;
+            background-color: white;
+
+        }
+/* input */
+        .display input {
+            width: 330px;
+            height: 90px;
+            padding: 20px;
+            border: none;
+            outline: none;
+            margin: 10px;
+            background: gray;
+            color: black;
+            font-size: 50px;
+            font-weight: 200;
+            text-align: right;
+            cursor: pointer;
+        }
+
+/* button */
+        button {
+            width: 70px;
+            height: 50px;
+            margin: 10px;
+            background: rgb(62, 62, 60);
+            color: black;
+            font-size: 32px;
+            font-weight: 600;
+            border: 1px solid blueviolet;
+            outline-offset: 3px;
+            border-radius: 38px;
+        }
+/* act */
+        button:active {
+            background: black;
+
+        }
+/* on color */
+        .opr {
+            color: #fbff00;
+            background-color: burlywood;
+            font-weight: 700px;
+        }
+/* on color */
+        #ecc {
+            background: orangered;
+            font-weight: 900px;
+        }
+/* on animation2 */
+        .mypage {
+
+            font-size: 15px;
+            color: black;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            border: 2px sandybrown;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 2160px;
+                color: aqua;
+                font-size: 2px;
+            }
+
+            to {
+                left: 0px;
+                font-size: 30px;
+            }
+        }
+    </style>
+   
+</head>
+<!-- box -->
+
+<body class="my">
+    <h1 class="mypage">##CALCULATOR##</h1>
+    <div class="box">
+<!-- cal -->
+
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="inputbox" value="0" disabled>
+            </div>
+            <!--button r1 -->
+            <div class="row">
+                <button type="button" class="opr">AC</button>
+                <button type="button" class="opr">DEL</button>
+                <button type="button" class="opr">%</button>
+                <button type="button" class="opr">/</button>
+            </div>
+            <!-- buttonr2 -->
+            <div class="row">
+                <button type="button">7</button>
+                <button type="button">8</button>
+                <button type="button">9</button>
+                <button type="button" class="opr">*</button>
+            </div>
+            <!-- buttonr3 -->
+            <div class="row">
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button">6</button>
+                <button type="button" class="opr">+</button>
+            </div>
+            <!--button r4 -->
+            <div class="row">
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button" class="opr">-</button>
+            </div>
+            <!-- bottonr5 -->
+            <div class="row">
+                <button type="button" id="fff">+/- </button>
+                <button type="button">0</button>
+                <button type="button">.</button>
+                <button type="button" id="ecc">=</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

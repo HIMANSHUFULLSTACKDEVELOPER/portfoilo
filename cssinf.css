@@ -1,0 +1,77 @@
+/* animation */
+.playing {
+    font-size: 25px;
+    color: gray;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        color: aqua;
+        font-size: 2px;
+    }
+
+    to {
+        left: 360px;
+        font-size: 40px;
+        color: black;
+    }
+}
+
+/* html an */
+.onehtm {
+    font-size: 25px;
+    color: gray;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        color: aqua;
+        font-size: 2px;
+    }
+
+    to {
+        left: 360px;
+        font-size: 40px;
+        color: black;
+    }
+}
+
+/* 2an */
+.twohtm {
+    font-size: 25px;
+    color: gray;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 40sec;
+    animation-duration: 31s;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        color: aqua;
+        font-size: 2px;
+    }
+
+    to {
+        left: 360px;
+        font-size: 40px;
+        color: black;
+    }
+}
+body{
+    background-color: bisque;
+}

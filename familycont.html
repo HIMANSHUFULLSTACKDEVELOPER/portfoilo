@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            background: url(https://wallpapercave.com/wp/wp2509860.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+            color: rgb(197, 233, 233);
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        label {
+            color: white;
+            font-size: 32px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 9px 20px;
+        }
+
+        .phone-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: white;
+            background-color: rgb(0, 128, 0);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+
+        }
+
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp2119399.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid white;height: 80PX;width: 370PX; text-align: center; background-color: rgb(35, 118, 49); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">
+        CONTACT</h1> <br>
+    <section id="contact ">
+
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--  phone number link -->
+    <a href="tel:+19545966656" class="phone-link">Call us: 9545966656 , 9545677856</a>
+
+
+    <a style="font-size: 62px;font-family: Verdana, Geneva, Tahoma, sans-serif; color: magenta; text-decoration: none;"
+        href="https://www.google.com/maps/place/Rohana,+Maharashtra+440023/@21.1419497,78.8519602,15z/data=!3m1!4b1!4m6!3m5!1s0x3bd4ed12a00dfc91:0x8ff9a9c2bd9b77dd!8m2!3d21.1434678!4d78.8623275!16s%2Fg%2F12hqvvdbs?entry=ttu">
+        Location</a>
+    <br>
+</body>
+
+</html>

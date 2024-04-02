@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="https://dizname.in/wp-content/uploads/2021/09/satyam-traders-logo.png">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* CSS Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    /* Navigation Bar */
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    /* Navigation Bar: Logo and Image */
+    #logo {
+        margin: 10px 34px;
+    }
+
+    #logo img {
+        height: 59px;
+        margin: 3px 6px;
+    }
+
+
+    /* Navigation Bar: List Styling */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    /* Home Section */
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        background-image: url(./fa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0px 0px 27px;
+        height: 1292px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+    }
+
+    #home h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+    }
+
+    #home p {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree Serif', serif;
+    }
+
+
+    /* Clients Section */
+    #client-section {
+        position: relative;
+    }
+
+    #client-section::before {
+        content: "";
+        position: absolute;
+        background: url("");
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .client-item {
+        padding: 34px;
+    }
+
+    #clients img {
+        height: 384px;
+        width: 410px;
+        border-radius: 72px;
+    }
+
+
+    /* Contact Section */
+    #contact {
+        position: relative;
+    }
+
+    #contact::before {
+        content: "";
+        position: absolute;
+        background: url();
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    #contact-box form {
+        width: 40%;
+    }
+
+    #contact-box label {
+        font-size: 1.3rem;
+        font-family: 'Bree Serif', serif;
+
+    }
+
+
+    footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+
+    /* Utility Classes */
+    .h-primary {
+        font-family: 'Bree Serif', serif;
+        font-size: 3.8rem;
+        padding: 12px;
+
+    }
+
+    .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: brown;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .color {
+        background-color: antiquewhite;
+    }
+
+
+
+
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+
+    .footer-content {
+        text-align: center;
+    }
+
+
+
+
+    .footer-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+
+
+    .footer-content a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    
+    .phone-link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 18px;
+        color: white;
+        background-color: rgb(0, 128, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+
+    }
+
+    .btn {
+
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        border-radius: 20px;
+        box-shadow: 0px 0px 27px blanchedalmond;
+    }
+</style>
+
+<body class="color">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="./family.jpg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="./family.html">Home</a></li>
+            <li class="item"><a href="./familystory.html">OUR STORY </a></li>
+            <li class="item"><a href="./familyevent.html">EVENTS</a></li>
+            <li class="item"><a href="./familygallery.html">GALLERY</a></li>
+            <li class="item"><a href="./familycont.html">CONTACT</a></li>
+        </ul>
+
+    </nav>
+
+
+    <br><br><br><br>
+
+
+    <section id="home">
+
+
+    </section>
+
+    <br><br>
+
+    <h1
+        style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid white;height: 80PX;width: 370PX; text-align: center; background-color: aquamarine; box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX; margin-top: 700px;">
+        MY & FAMILY</h1> <br> <br><br>
+    <img src="./mainphoto.jpg" alt="" style="float: left; height: 820px;width: 1000px; margin-top: 120px;">
+    <P style="text-align: center;font-size: 28px; margin:10px; margin-left: 6vh; margin-bottom: 0px; margin-top:120px;">
+        A
+        Members of a family mostlive in a single residence and perform different duties. Members of a family and their
+        duties vary from culture
+        to culture and at different times in history. A household in which parents, children, grandparents, and other
+        relatives live is known as an extended family. Extended families are important in agricultural societies because
+        they provide a labor force to work a single unit of family land and perform household
+        family in which members of a unilineal descent group (a group in which descent through either the female or the
+        male line is emphasized) live together with their spouses and offspring in one homestead and under the authority
+        of one of the members. The joint family is an extension of the nuclear family (parents and dependent children),
+        and it typically grows when children of one sex do not leave their parents’ home at marriage but bring their
+        spouses to live with them. Thus, a patrilineal joint family might consist of an older man and his wife, his sons
+        and unmarried daughters, his sons’ wives and children, and so forth. For a man in the middle generation,
+        belonging to a joint family means joining his conjugal family to his family of A family is a group of people
+        related by the ties of blood, marriage, or adoption. Members of a family most
+        live in a single residence and perform different duties. Members of a family and their duties vary from culture
+        to culture and at different times in A household in which parents, children, grandparents, and otherrelatives
+        live is known as an extended family. Extended families are important in agricultural societies because
+        they provide a labor force to work a single unit of family land and perform household family in which members of
+        a unilineal descent group (a group in which descent through either the female or the
+        male line is emphasized) live together with their spouses and offspring in one homestead and under the authority
+        of one of the members.
+    </P>
+    <br>
+    <br>
+    <br>
+
+    <section id="client-section" style="margin-top: 220px;">
+
+        <div id="clients">
+            <div class="client-item">
+                <img src="./img/amrudev.jpg" alt="Our Client">
+                <br>
+                <br>
+                <h1>Amrudev Patil (Dadu)</h1>
+                <br>
+                <p>"A grandfather has the wisdom of long experience and the love of an understanding heart"</p>
+
+
+            </div>
+            <div class="client-item">
+                <img src="./img/mainabai.jpg" alt="Our Client">
+                <br><br>
+                <h1>Mainabai Amrudev Patil (Dadi)</h1>
+                <br>
+                <p>"A grandma is a little bit parent, a little bit teacher, and a little bit best friend"</p>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div id="clients">
+            <div class="client-item">
+                <img src="./img/rajendra.png" alt="Our Client">
+                <br><br>
+                <h1>Rajendra Amrudev Patil (Baba)</h1>
+                <br>
+                <p>"Dad, your love and guidance have shaped me into who I am today. Thank you for being an incredible
+                    father"</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/kalpana.jpg" alt="Our Client">
+                <br><br>
+                <h1>kalpana Rajendra Patil (aai)</h1>
+                <br>
+                <p>"the special time of year when you get to celebrate your first best friend and the person you always
+                    turn to when you need advice."</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/ravidra.jpg" alt="Our Client">
+                <br><br>
+                <h1>Ravindra Amrudev Patil (chahu)</h1>
+                <br>
+                <p>"Not everyone is as lucky as I am to have an uncle like you to love."</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/dipali.jpg" alt="Our Client">
+                <br><br>
+                <h1> Dipali Ravindra Patil (chachi)</h1>
+                <br>
+                <p>"chachi are an incredible combination of a mother, a sister, and a friend simply enjoy a day out
+                    together. "</p>
+
+
+            </div>
+        </div>
+
+        <div id="clients">
+            <div class="client-item">
+                <img src="./img/achal.jpg" alt="Our Client">
+                <br><br>
+                <h1> Achal Rajendra Patil (Tai)</h1>
+                <br>
+                <p>""Having you as my sister is one of the greatest joys of my life""</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/sanch.jpg" alt="Our Client">
+                <br><br>
+                <h1> Sanchit Ravindra Patil (Bhai)</h1>
+                <br>
+                <p>"Regardless of what I've asked of him, my brother has never refused me."</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/himanshu.jpg" alt="Our Client">
+                <br><br>
+                <h1>Himanshu Rjendra Patil </h1>
+                <br>
+                <p>"Happiness is when what you think, what you say, and what you do are in harmony".</p>
+
+            </div>
+            <div class="client-item">
+                <img src="./img/priyanshu.jpg" alt="Our Client">
+                <br><br>
+                <h1>priyanshu Ravindra patil (Bhai) </h1>
+                <br>
+                <p>"Growing up, I revered my brother and still do. "</p>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+    <h1
+        style="text-align: center; background-color: rgb(118, 165, 42);font-size: 32px;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+        रोटी तो हर कोई कमाता है, <br>
+
+        लेकिन कुछ ही लोग रोटी परिवार के <br>
+
+        साथ बैठ कर खाते हैं ! <br>
+
+        Love Your Family ! <br>
+    </h1>
+    <br>
+    <br>
+    <h1
+        style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid white;height: 80PX;width: 370PX; text-align: center; background-color: rgb(127, 255, 153); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">
+        MY & FAMILY</h1> <br>
+    <div id="clients">
+        <div class="client-item">
+            <img src="./recentphotos/1.jpg" alt="Our Client">
+            <br><br>
+
+
+        </div>
+        <div class="client-item">
+            <img src="./recentphotos/2.jpg" alt="Our Client">
+            <br><br>
+
+
+        </div>
+        <div class="client-item">
+            <img src="./recentphotos/3.jpg" alt="Our Client">
+            <br><br>
+
+        </div>
+
+        <div class="client-item">
+            <img src="./recentphotos/4.jpg" alt="Our Client">
+            <br><br>
+
+
+        </div>
+        <div class="client-item">
+            <img src="./recentphotos/5.jpg" alt="Our Client">
+            <br><br>
+
+
+        </div>
+        <div class="client-item">
+            <img src="./recentphotos/6.jpg" alt="Our Client">
+            <br><br>
+
+        </div>
+
+    </div>
+    <!--  phone number link -->
+    <a href="tel:+19545966656" class="phone-link">Call us: 9545966656 , 9545677856</a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h1>Me Family</h1>
+            </div>
+        </div>
+        <br><br>
+        <p style="text-align: center;"> "Being part of our family means we expect you to bake those delicious pies for
+            every family gathering."</p>
+        <BR></BR>
+        <div class="footer-content">
+
+            <ul>
+
+
+
+
+                <li> <a href="https://join.skype.com/invite/y2vdTSfmGrig"><i class="fa-brands fa-skype">
+                        </i></a></li>
+                <BR></BR>
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a> </li>
+                <BR></BR>
+                <li> <a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook"></i></a> </li>
+                <BR></BR>
+                <li><a href="https://twitter.com/home"><i class="fa-brands fa-square-twitter"></i></a> </li>
+
+            </ul>
+            <h1
+                style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-display: 22PX;">
+                "HAPPY FAMILY</h1>
+            <H1>LOVELY FAMILY"</H1>
+    </footer>
+
+</body>
+
+</html>

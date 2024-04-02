@@ -1,0 +1,54 @@
+ /* all style */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://cdn.siasat.com/wp-content/uploads/2021/05/kbc-.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* style on a  */
+
+a {
+    text-decoration: none;
+}
+
+/* headercontect */
+.header-content {
+    margin-bottom: 150px;
+    color: black;
+    text-align: center;
+
+}
+
+/* headerh2on */
+.header-content h2 {
+    font-size: 13vmin;
+}
+
+/* headerh1 */
+.header-content h1 {
+    font-size: 10vmin;
+    color:0px ;
+}
+
+/* stylebotton */
+.ctn {
+    padding: 8px 15px;
+    background: #fc036b;
+    color: whitesmoke;
+    border-radius: 16vh;
+    gap: 2px;
+    font-size: 37px;
+}

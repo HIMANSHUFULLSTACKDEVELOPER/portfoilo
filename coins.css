@@ -1,0 +1,97 @@
+ /* main box */
+ .main-container {
+    background-color: gray;
+    width: 70vw;
+    margin-left: 20vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 20px;
+    box-shadow: 0px 0px 90px white;
+    margin-top: 5px;
+}
+
+/* loader */
+.loader {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background:
+        var(--c) 0% 50%,
+        var(--c) 50% 50%,
+        var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: l1 1s infinite linear;
+}
+
+@keyframes l1 {
+    0% {
+        background-size: 20% 100%, 20% 100%, 20% 100%
+    }
+
+    33% {
+        background-size: 20% 10%, 20% 100%, 20% 100%
+    }
+
+    50% {
+        background-size: 20% 100%, 20% 10%, 20% 100%
+    }
+
+    66% {
+        background-size: 20% 100%, 20% 100%, 20% 10%
+    }
+
+    100% {
+        background-size: 20% 100%, 20% 100%, 20% 100%
+    }
+}
+
+/* input box */
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* display box */
+.display {
+    background-color: whitesmoke;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 45px;
+    padding: 20px;
+    margin-left: 30px;
+}
+/* style  input box*/
+.input-box {
+    height: 44px;
+    width: 80%;
+    font-size: 22px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.701);
+    border: none;
+    border-radius: 20px;
+}
+
+/* button */
+.button {
+    width: 80%;
+    margin: 20px;
+    height: 44px;
+    background-color: navy;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px 0px 26px;
+}
+/* style body */
+body {
+    background: url(https://media.istockphoto.com/id/1495503758/vector/sunburst-and-coin-background-material.jpg?s=612x612&w=is&k=20&c=UdjW6xj8y67RFYY5gigBScUEs39pATKMBUuZr1uFwpo=)no-repeat center/cover;
+}

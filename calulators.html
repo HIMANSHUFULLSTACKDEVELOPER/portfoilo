@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- little -->
+    <title>calculators</title>
+    <!-- links -->
+    <link rel="stylesheet" href="./calulators.css">
+    <script src="./calulators.js"></script>
+</head>
+<!-- body -->
+
+<body class="my">
+    <!-- main  -->
+    <div class="atharv">
+
+<!-- calcalutorss  -->
+        <div class="calculator">
+            <div class="display">
+                <h1 type="text" id="display" value="" style="font-size: smaller;">
+            </div>
+            <!--row1  -->
+            <div class="row">
+                <button id="Ac" type="button" class="opr" onclick="clearFunction()" style="font-size: 30px;">AC</button>
+                <button id="Del" type="button" class="opr" onclick="Backspace()" style="font-size: 30px;">DEL</button>
+                <button id="%" type="button" class="opr" onclick="percentage()">%</button>
+                <button id="/" type="button" class="opr" onclick="div()">÷</button>
+            </div>
+            <!-- rw2 -->
+            <div class="row">
+                <button id="7" type="button" onclick="numberType(7)">7</button>
+                <button type="button" onclick="numberType(8)">8</button>
+                <button type="button" onclick="numberType(9)">9</button>
+                <button type="button" class="opr" onclick="multiplication()">x</button>
+            </div>
+            <!--row3  -->
+            <div class="row">
+                <button type="button" onclick="numberType(4)">4</button>
+                <button type="button" onclick="numberType(5)">5</button>
+                <button type="button" onclick="numberType(6)">6</button>
+                <button type="button" class="opr" onclick="add()">+</button>
+            </div>
+            <!-- row4 -->
+            <div class="row">
+                <button type="button" onclick="numberType(1)">1</button>
+                <button type="button" onclick="numberType(2)">2</button>
+                <button type="button" onclick="numberType(3)">3</button>
+                <button type="button" class="opr" onclick="sub()">-</button>
+            </div>
+            <!--  row5-->
+            <div class="row">
+                <button id="=/-" type="button" id="fff" onclick="numberType()">+/- </button>
+                <button type="button" id="fff" onclick="numberType(0)">0</button>
+                <button type="button" id="fff" onclick="">.</button>
+                <button id="=" type="button" id="ecc" onclick="showResult()">=</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

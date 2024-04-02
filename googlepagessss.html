@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Search Page</title>
+  
+  <!--  CSS and Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./googlepagesss.css"> <!-- External CSS file -->
+  
+  <!-- JavaScript file -->
+  <script src="./googlepagesss.js"></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="" class="navtext">Gmail</a>
+    <a href="" class="navtext">Images</a>
+    <span class="material-icons apps">apps</span>
+    <img src="avatar3.png" alt="" class="avatar">
+  </nav>
+  
+  <!-- Main Content -->
+  <div class="main">
+    <div class="">
+      <img style="height: 360px;" src="./enjoy.png" alt="" class="google"> <!-- Google logo or image -->
+    </div>
+    <br>
+    
+    <!-- Search Bar -->
+    <div class="searchb">
+      <input type="text" id="searchInput"> <!-- Input field for search query -->
+      <img src="miclogo.png" alt="" class="mic"> <!-- Microphone icon for voice search -->
+    </div>
+    
+    <!-- Search Buttons -->
+    <div class="sbutton">
+      <button onclick="search()">Search</button> <!-- Button to trigger search function -->
+      <button onclick="feelingLucky()">I'm Feeling Lucky</button> <!-- Button for "I'm Feeling Lucky" feature -->
+      
+      <!-- Language Options -->
+      <h5>Google offered in : हिन्दी বাংলা తెలుగు मराठी <br> தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</h5>
+      <br>
+      <br>
+      <!-- Results Display Area -->
+      <div id="results"></div> <!-- Placeholder for displaying search results -->
+    </div>
+  </div>
+</body>
+
+</html>

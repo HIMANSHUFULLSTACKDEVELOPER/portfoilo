@@ -1,0 +1,7 @@
+/* style body */
+
+body {
+    background: url(https://cdn.dribbble.com/users/283866/screenshots/6409396/cards2.jpg)no-repeat center /cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

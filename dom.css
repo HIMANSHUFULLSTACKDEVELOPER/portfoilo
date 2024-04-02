@@ -1,0 +1,64 @@
+/* main box */
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(246, 251, 252);
+    display: flex;
+    flex-direction: row;
+  }
+/* left box */
+  .left-container {
+    width: 50%;
+    height: 100%;
+background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+  }
+/* right box */
+  .right-container_cl {
+    width: 50%;
+    height: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    font-size: 30px;
+  }
+/* plus button */
+  .plus-button {
+    background-color: rgb(9, 137, 9);
+    width: 40%;
+    height: 100px;
+    font-size: 22px;
+    margin-top: 50px;
+  }
+/* hover */
+  .plus-button-hover {
+    background-color: #720c0c;
+    width: 40%;
+    height: 120px;
+    font-size: 32px;
+  }
+/* main button */
+  .minus-button {
+    background-color: rgb(193, 6, 6);
+    width: 40%;
+    height: 100px;
+    font-size: 22px;
+  }
+/* bricks */
+  .brick {
+    background-color: red;
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
+    width: 20%;
+    height: 80px;
+    margin: 10px;
+  }

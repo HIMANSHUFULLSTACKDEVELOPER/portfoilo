@@ -1,0 +1,90 @@
+
+/* style  whole*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+/* style my */
+.my {
+    background-image: url(https://wallpapercave.com/wp/wp2497566.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+/* style atharv */
+.atharv {
+    min-height: 120vh;
+    max-width: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/* style  my*/
+.my {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+/* style calculator */
+.calculator {
+    padding: 16px;
+    box-shadow: 0 0 25px black;
+    border: 2px solid rgb(116, 114, 114);
+    border-radius: 17px;
+    background-color: whitesmoke;
+
+}
+/* style  display*/
+.display {
+    width: 360px;
+    height: 90px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    margin: 10px;
+    background: gray;
+    color: black;
+    font-size: 50px;
+    font-weight: 200;
+    text-align: right;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+
+/* style button */
+button {
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    background: rgb(62, 62, 60);
+    color: bla;
+    font-size: 32px;
+    font-weight: 600;
+    border: 1px solid grey;
+    outline-offset: 3px;
+    border-radius: 38px;
+}
+/* style  active*/
+button:active {
+    background: black;
+
+}
+/* style  opr*/
+.opr {
+    background-color: orangered;
+    font-weight: 700px;
+    color: white;
+}
+/* style id ecc */
+#ecc {
+    background: orangered;
+    font-weight: 900px;
+    color: white;
+}

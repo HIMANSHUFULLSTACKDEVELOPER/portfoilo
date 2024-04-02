@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="https://dizname.in/wp-content/uploads/2021/09/satyam-traders-logo.png">
+</head>
+<style>
+    /* CSS Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    /* Navigation Bar */
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    /* Navigation Bar: Logo and Image */
+    #logo {
+        margin: 10px 34px;
+    }
+
+    #logo img {
+        height: 59px;
+        margin: 3px 6px;
+        border-radius: 20PX;
+    }
+
+
+    /* Navigation Bar: List Styling */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+        color: white;
+        display: block;
+        padding: 3px 22px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    /* Home Section */
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        background-image: url(https://nepc.gov.ng/cms/wp-content/uploads/2020/10/nepc-groundnuts.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 642px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+    }
+
+    #home h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+    }
+
+    #home p {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree Serif', serif;
+    }
+
+    /* Services Section */
+    #services {
+        margin: 34px;
+        display: flex;
+    }
+
+    #services .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+
+    }
+
+    #services .box img {
+        height: 160px;
+        margin: auto;
+        display: block;
+
+    }
+
+    #services .box p {
+        font-family: 'Bree Serif', serif;
+
+
+    }
+
+    /* Clients Section */
+    #client-section {
+        position: relative;
+    }
+
+    #client-section::before {
+        content: "";
+        position: absolute;
+        background: url("");
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .client-item {
+        padding: 34px;
+    }
+
+    #clients img {
+        height: 124px;
+    }
+
+
+    /* Contact Section */
+    #contact {
+        position: relative;
+    }
+
+    #contact::before {
+        content: "";
+        position: absolute;
+        background: url(https://wallpapercave.com/wp/wp2509860.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    #contact-box form {
+        width: 40%;
+    }
+
+    #contact-box label {
+        font-size: 1.3rem;
+        font-family: 'Bree Serif', serif;
+
+    }
+
+
+    footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+
+    /* Utility Classes */
+    .h-primary {
+        font-family: 'Bree Serif', serif;
+        font-size: 3.8rem;
+        padding: 12px;
+
+    }
+
+    .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: brown;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .color {
+        background-color: antiquewhite;
+    }
+
+
+
+
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    .footer-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-content li {
+        margin-bottom: 5px;
+    }
+
+    .footer-content a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .footer-content a:hover {
+        text-decoration: underline;
+    }
+
+    .phone-link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 18px;
+        color: white;
+        background-color: rgb(0, 128, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+
+    }
+
+    .btn {
+
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        border-radius: 20px;
+        box-shadow: 0px 0px 27px blanchedalmond;
+    }
+</style>
+
+<body class="color">
+    <nav id="navbar">
+        <div id="logo" style="border-radius: 30PX;">
+            <img src="http://pluspng.com/img-png/kabir-saheb-png-the-581.jpg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">items</a></li>
+            <li class="item"><a href="#contact ">Contact Us</a></li>
+            <li class="item"><a href="./facwebsite2about.html">About Us</a></li>
+        </ul>
+
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyOnline GroundNut (मूंगफली)</h1>
+        <p>Nuts have gotten much attention recently for their potential </p>
+        <p> health benefits and role in disease prevention.</p>
+        <a class="btn" href="./facwebsite3order.html"> Order Now </a>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box" style=" box-shadow: 0px 0px 27px rgb(243, 241, 229);">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/2/EA/FT/OJ/12576166/red-groundnut-seeds.jpg"
+                    alt="">
+                <h2 class="h-secondary center"></h2>
+                <p class="center">Groundnut or Peanut (Arachis hypogaea) is a very important oilseed crop and covers an
+                    area of 5.85 m ha with production of 8.26 m tons. </p>
+            </div>
+            <div class="box">"
+                <img src="https://i.pinimg.com/736x/54/e6/c0/54e6c0f1e80bf9890238cc95dc14011d.jpg" alt="">
+                <h2 class="h-secondary center"></h2>
+                <p class="center">Groundnut or Peanut (Arachis hypogaea) is a very important oilseed crop and covers an
+                    area of 5.85 m ha with production of 8.26 m tons.. </p>
+            </div>
+            <div class="box">
+                <img src="http://shreebhagwatienterprise.com/xl-sbe/productImage/Groundnut-Seeds15473530.jpg" alt="">
+                <h2 class="h-secondary center"></h2>
+                <p class="center">The major groundnut growing states in India are Andhra Pradesh, Maharashtra, Gujarat
+                    and Karnataka. Today we will talk about best varieties of Groundnut in India.</p>
+            </div>
+            <div class="box">
+                <img src="https://www.agrocrops.com/front/blog/1684953390_98bf797ba6.jpg" alt="">
+                <h2 class="h-secondary center"></h2>
+                <p class="center">. To remove this skin layer, skinless peanuts are passed onto a long dryer and
+                    roasting machine. Mild heat is then introduced, while the peanut travels on a metal mesh conveyor
+                    belt through a series of chambers which vary between hot and cold, in order to reduce temperature
+                    shock.</p>
+            </div>
+            <div class="box">
+                <img src="https://tse4.explicit.bing.net/th?id=OIP.ErIybSFq8IAGixndLmxUWAHaEv&pid=Api&P=0&h=180" alt="">
+                <h2 class="h-secondary center"></h2>
+                <p class="center">Blanched peanuts, by their nature, don’t have shells, and typically acquire a slightly
+                    soft texture. They’re ideally suited for roasting, cooking or baking, and they make especially good
+                    peanut butter. </p>
+            </div>
+        </div>
+        <img src="https://i.pinimg.com/736x/45/d2/34/45d234e59fef835f204ef302fa979b5e--international-companies-the-peanuts.jpg"
+            alt="" width="100%" height="1200px">
+
+
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">items</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://m.media-amazon.com/images/I/51nbI0GadZL._AC_UL480_FMwebp_QL65_.jpg"
+                    alt="Our Client"><br>
+                <p>PNC Quality Bazar <br>(Moongfali) </p>
+
+
+            </div>
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://assets.epicurious.com/photos/5b48ebd8a647bb50f09800de/6:4/w_1600%2Cc_limit/peanuts%252007132018.jpg"
+                    alt="Our Client"><br>
+                <p>SHREGO Dark Roasted <br>(Moongfali)</p>
+
+            </div>
+
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://ggp.sg/media/k2/items/cache/83c2446a0896df0a1f4af01c940ae1d9_3_XL.jpg?t=1627399988"
+                    alt="Our Client"><br>
+                <p>Amazon Brand - <br> (Moongfali) </p>
+                
+            </div>
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://ggp.sg/media/k2/items/cache/83c2446a0896df0a1f4af01c940ae1d9_XL.jpg"
+                    alt="Our Client"><br>
+                <p>Shrego Jumbo Raw <br> (Moongfali) </p>
+
+            </div>
+
+        </div>
+        <div id="clients">
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://m.media-amazon.com/images/I/51f8-tc0R9L._SX679_.jpg" alt="Our Client"><br>
+                <p>advancedestore Roasted भुनी <br>साबुत मूंगफली</p>
+
+
+            </div>
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://netstorage-legit.akamaized.net/images/vllkyt5q9ln4f4rki.jpg?imwidth=1080"
+                    alt="Our Client"><br>
+                <p> Swiss Naturals Roasted <br> (Moongfali)</p>
+
+            </div>
+
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://i.pinimg.com/originals/b8/e8/99/b8e8998f18954ac29a5e820702be6170.jpg"
+                    alt="Our Client"><br>
+                <p>Pro Nature Organic Raw Peanuts <br> (Moongfali)</p>
+
+            </div>
+            <div class="client-item">
+                <img style="height:250px ;width:250px ;"
+                    src="https://i.pinimg.com/736x/54/e6/c0/54e6c0f1e80bf9890238cc95dc14011d.jpg" alt="Our Client"> <br>
+                <p>SHREGO Dark Roasted <br>(Moongfali)</p>
+
+            </div>
+
+
+
+    </section>
+    <h1
+        style="text-align: center; background-color: brown;font-size: 52px;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+        All the groundnut are available</h1>
+    <h1
+        style="text-align: center;background-color: brown;font-size: 52px;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+        how many kg you want </h1>
+    <h1
+        style="text-align: center;background-color: brown;font-size: 52px;font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+        groundnut</h1>
+
+    <section id="contact ">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--  phone number link -->
+    <a href="tel:+19545966656" class="phone-link">Call us: 9545966656 , 9545677856</a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h2>Contact Us</h2>
+                <p>+919545966656</p>
+                <p>+919545677856</p>
+                <p>Email:satyanamtradersrohana@gamil.com </p>
+                <p>Phone: +91-8788-2097-73</p>
+            </div>
+
+            <div class="footer-content">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/satyanamtraders.rohana">Facebook</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h2>owner</h2>
+                <ul>
+                    <li><a href="./facwebsiteowner.html">OWNER</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

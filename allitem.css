@@ -1,0 +1,53 @@
+/* style serivies */
+#services {
+        margin: 34px;
+        display: flex;
+    }
+/* style services box */
+    #services .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+
+    }
+/* style  box img*/
+    #services .box img {
+        height: 340px;
+        width: 300px;
+        margin: auto;
+        display: block;
+
+
+    }
+/* style box p */ 
+    #services .box p {
+        font-family: 'Bree Serif', serif;
+
+
+    }
+/* style body */
+    body {
+        background-image: url("https://wallpapercave.com/wp/PPMnOZM.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+/* style ctn */
+    .ctn {
+        padding: 8px 15px;
+        background: #fc036b;
+        color: rgb(19, 14, 14);
+        border-radius: 16vh;
+        text-decoration: none;
+        font-size: 33px;
+    }
+
+  /* style ale */
+    .ale {
+        font-size: 4vmin;
+        color: #484872;
+        margin: 20px auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }

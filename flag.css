@@ -1,0 +1,70 @@
+/* style div1 */
+
+.div1 {
+    background-color: #FF8911;
+    width: 600px;
+    height: 150px;
+}
+/* style div2*/
+.div2 {
+    background-color: #FBF9F1;
+    width: 600px;
+    height: 150px;
+
+}
+/* style div3 */
+.div3 {
+    background-color: #3EC70B;
+    width: 600px;
+    height: 150px;
+}
+/* style body */
+body {
+    background: url(./images_videos/him.jpg)no-repeat center/cover;
+}
+/* style animation*/
+.indi {
+
+    font-size: 25px;
+    color: black;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        color: aqua;
+        font-size: 2px;
+    }
+
+    to {
+        left: 260px;
+        font-size: 40px;
+    }
+}
+/* style animation */
+.h1 {
+
+    font-size: 25px;
+    color: black;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+        color: aqua;
+        font-size: 2px;
+    }
+
+    to {
+        left: 260px;
+        font-size: 40px;
+    }
+}
