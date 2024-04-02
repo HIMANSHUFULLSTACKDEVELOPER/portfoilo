@@ -1,0 +1,19 @@
+
+/* style table */
+table {
+    margin-left: 180px;
+
+  }
+
+  /* style body */
+      body {
+          background: url(./images_videos/him.jpg)no-repeat center/cover;
+      }
+  /* style table*/
+
+  table,
+  th,
+  td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+  }

@@ -1,0 +1,155 @@
+/* style body */
+body {
+    background-image: linear-gradient(#636162, #b1afaf);
+    height: 122vh;
+    font-weight: bold;
+    letter-spacing: 2px
+}
+/* style whole */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'sans-serif'
+}
+/* style main */
+.main {
+    background-color: white;
+    height: auto;
+    width: 650px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 60%;
+}
+/* style left */
+.left {
+    background-color: #fbb03b;
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+/* style right */
+.right {
+    width: 450px;
+    float: left;
+}
+/* style img profilr */
+.profile-img {
+    height: 180px;
+    width: 180px;
+    background-color: #addd;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    border: 10px soild #fbb03b;
+    box-shadow: 6px 7px 9px 5px #fbb03b73;
+}
+/* style  img*/
+.profile-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+/* style  box*/
+box-1 {
+    position: relative;
+}
+/* style  heading*/
+.heading {
+    background-color: #4d4d4d;
+    padding: 10px;
+    color: #fbb03b;
+    text-align: left;
+    padding-left: 20px;
+    margin-right: -15px;
+
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    background-color: #5a5959;
+    left: 191px;
+    top: 26px;
+    transform: rotate(56deg);
+}
+/* style p1*/
+p1 {
+    padding: 9px 10px;
+    font-size: 11px;
+}
+/* style */
+.icons1 {
+    font-size: 16px !important;
+    padding-right: 10px !important;
+    vertical-align: sub;
+}
+/* style  skill*/
+.skill-container {
+    width: 90%;
+    background-color: #4d4d4d;
+    margin: 0px 10px;
+
+}
+/* style % */
+.skill {
+    text-align: right;
+    padding: 2px;
+    padding-bottom: 2px;
+    color: white;
+}
+
+.HTML {
+    width: 90%;
+    background-color: white;
+}
+
+.CSS {
+    width: 30%;
+    background-color: white;
+}
+
+.JAVASCRIPT {
+    width: 15%;
+    background-color: white;
+}
+
+.web {
+    width: 85%;
+    background-color: white;
+}
+
+.gra {
+    width: 70%;
+    background-color: white;
+}
+/* style  icon*/
+.icons2 {
+    padding: 18px 10px;
+}
+/* style  name */
+.name-div {
+    padding: 86px 0px 60px 55px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.name-div h1 {
+    margin-bottom: 10px;
+
+}
+
+.box-2 {
+    padding: 0px 50px;
+    margin-top: 30px;
+}
+
+.p2 {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 18px;
+    margin-top: 5px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- tittle -->
+  <title>Music Player</title>
+  <!-- links -->
+  <link rel="stylesheet" href="./song.css">
+  <script src="./song.js"></script>
+ 
+</head>
+<!-- bodys -->
+<body>
+  <!-- HTML -->
+  <div class="box">
+    <div class="main-container">
+      <br> <br>
+      <div class="top">
+        <br><br>
+        <!-- songs all -->
+        <audio id="audio" controls style="height: 80px;width: 400px;">
+          <source src="song1.mp3" type="audio/mpeg">
+          <source src="song2.mp3" type="audio/mpeg">
+          <source src="song3.mp3" type="audio/mpeg">
+          <source src="song4.mp3" type="audio/mpeg">
+          <source src="song5.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="bottom">
+        <br><br>
+        <!-- buttons -->
+        <button id="previous"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.163);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.527); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Previous</button>
+        <button id="playPause"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.171);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.552); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Play</button>
+        <button id="next"
+          style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid rgba(255, 255, 255, 0.168);height: 80PX;width: 370PX; text-align: center; background-color: rgba(127, 255, 212, 0.558); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;">Next</button>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+  /* CSS styles */
+  body {
+    background-image: url("./weeksdaysss.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* style input */
+input[type="number"] {
+    padding: 10px;
+    font-size: 36px;
+    width: 400px;
+    border-radius: 30px;
+}
+/* style  button*/
+button {
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: aquamarine;
+    border-radius: 30px;
+}
+/* style result */
+#result {
+    margin-top: 20px;
+    font-size: 58px;
+    border-radius: 20px;
+    color: white;
+}
+/* style container*/
+.container {
+    text-align: center;
+    margin-top: 111px;
+    border-radius: 30px;
+    background: rgba(51, 210, 30, 0.027);
+    width: 633px;
+    height: 433px;
+    margin-left: 800px;
+    margin-right: auto;
+    box-shadow: 0px 0px 38px rgba(0, 0, 255, 0);
+}

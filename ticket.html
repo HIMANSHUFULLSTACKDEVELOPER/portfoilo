@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Document type declaration -->
+
+<html lang="en"> <!-- HTML document root with language set to English -->
+
+<head> <!-- Head section containing metadata and styles -->
+
+
+  <!-- Title of the document -->
+  <title>Bus Ticket Booking</title>
+  <link rel="stylesheet" href="./ticket.css">
+  <script src="./ticket.js"></script>
+
+
+
+</head>
+
+<body style="background-color:rgb(215, 215, 215);"> <!-- Body section -->
+
+  <!-- Header -->
+  <h1
+    style="color: rgb(255, 162, 2); text-align: center; font-size: 65px; font-weight: 700; margin-top: 80px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 900;margin-left: 100px;">
+    bus Booking</h1>
+
+  <!-- Container for the ticket booking form -->
+  <div class="container">
+    <!-- Label for age input -->
+    <label for="age"
+      style="color: rgb(255, 32, 32); text-align: center; font-size: 43px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter
+      your age:</label>
+    <!-- Input field for age -->
+    <input type="number" id="age" min="1" required>
+    <!-- Button to calculate ticket price -->
+    <button onclick="calculateTicketPrice()">SEE YOUR Price</button>
+    <!-- Paragraph to display ticket price -->
+    <p id="ticketPrice"></p>
+  </div>
+
+ 
+
+</body>
+
+</html>
