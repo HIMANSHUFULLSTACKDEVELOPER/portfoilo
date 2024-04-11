@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- tittle -->
+    <title>tables</title>
+
+    <style>
+        .main-container {
+            background-color: rgba(0, 0, 255, 0.607);
+            width: 70vw;
+            margin-left: 15vw;
+            height: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 20px;
+            box-shadow: 0px 0px 90px white;
+            margin-top: 93px;
+        }
+
+        .input-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* style  display*/
+        .display {
+            background-color: whitesmoke;
+            width: 90%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-top: 45px;
+            padding: 20px;
+            margin-left: 30px;
+        }
+
+        /* style  input box*/
+        .input-box {
+            height: 44px;
+            width: 80%;
+            font-size: 22px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.701);
+            border: none;
+            border-radius: 20px;
+        }
+
+        .button {
+            width: 80%;
+            margin: 20px;
+            height: 44px;
+            background-color: navy;
+            font-size: 22px;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0px 0px 26px;
+        }
+
+        body {
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<script>
+    // JavaScript display text
+    function promptt() {
+        let a = prompt("enter value here   ")
+        alert("prompt" + a);
+    }
+
+
+    function htmll() {
+        let a = document.getElementById("input").value;
+        alert("html" + a);
+    }
+    function assignn() {
+        let a = ("HIMANSHU");
+        alert("the value " + a)
+    }
+</script>
+<!-- bodys -->
+
+<body style="background-color: rgb(255, 255, 255);">
+    <!-- name -->
+    <h1
+        style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif rgb(247, 247, 247); border: 3PX solid white;height: 50PX;width: 370PX; text-align: center; background-color: rgba(4, 95, 141, 0.995); box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX; margin-left: 870px;color: wheat;">
+        INPUT TABLES </h1> <br>
+    <!--  mains -->
+
+    <body style="margin: 0px">
+        <div class="main-container">
+            <div class="display" id="display"></div>
+            <div class="input-container">
+                <input id="input" type="number" class="input-box" />
+                <!-- 2 buttons -->
+
+                <button class="button" onclick="promptt()">Prompt</button>
+                <button class="button" onclick="htmll()">Html</button>
+                <button class="button" onclick="assignn()">Assign</button>
+
+            </div>
+        </div>
+    </body>
+
+</html>
+
+</body>
+
+
+</html>
