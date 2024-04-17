@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MY PAGE</title>
+    <link rel="icon" type="image/x-icon" href="./images/mobile_Phone.jpg" />
+
+    <style>
+        .box {
+            height: 60px;
+            width: 50vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+
+        #section-one {
+            background-color: red;
+            margin-left: 390px;
+            border-radius: 30px;
+        }
+
+        #section-two {
+            background-color: green;
+            margin-left: 390px;
+            border-radius: 30px;
+        }
+
+        .display {
+            width: 100vw;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        a {
+            font-size: 22px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .input-box {
+            height: 60px;
+            width: 250vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            background-color: lightslategray;
+            font-size: 44px;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            font-size: 22px;
+        }
+        #output{
+            font-size: 53px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <script>
+        let a = 0;
+        function add() {
+
+            if (a <= 9) {
+                a++;
+                document.getElementById("output").innerHTML = a;
+            }
+        }
+        function sub() {
+            if (a > 0) {
+                a--;
+                document.getElementById("output").innerHTML = a;
+            }
+        }
+      
+    </script>
+</head>
+
+<body style="margin: 0; background-color: aquamarine;">
+    <div class="display">
+        <img src="" id="bulb" height="100px">
+
+        <h1 id="output"> Number</h1>
+    </div>
+   
+    <div id="section-two" class="box" onclick="add()">
+        <h1>GREEN</h1>
+    </div>
+    <div id="section-one" class="box" onclick="sub()">
+        <h1>RED</h1>
+    </div>
+   
+</body>
+
+</html>

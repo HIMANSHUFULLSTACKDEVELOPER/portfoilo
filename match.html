@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MY PAGE</title>
+    <style>
+        .box {
+            height: 60px;
+            width: 50vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            cursor: pointer;
+            /* Added cursor pointer to indicate clickable */
+        }
+
+        #section-one {
+            background-color: rgb(255, 0, 0);
+            margin-left: 390px;
+        }
+
+        #section-two {
+            background-color: rgb(37, 37, 219);
+            margin-left: 390px;
+        }
+
+        .display {
+            width: 100vw;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        a {
+            font-size: 22px;
+        }
+
+        .input-box {
+            height: 60px;
+            width: 50vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            background-color: lightslategray;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            font-size: 22px;
+        }
+    </style>
+    <script>
+        let a = 0;
+        let lastTeam = ""; // Added to keep track of last clicked team
+
+        function add() {
+            if (lastTeam !== "MI") {
+                document.getElementById("output").innerHTML = "MI vs LSG";
+                lastTeam = "MI";
+            } else {
+                document.getElementById("output").innerHTML = "Sequence is not available";
+            }
+        }
+
+        function sub() {
+            if (lastTeam !== "RCB") {
+                document.getElementById("output").innerHTML = "RCB vs LSG";
+                lastTeam = "RCB";
+            } else {
+                document.getElementById("output").innerHTML = "Sequence is not available";
+            }
+        }
+    </script>
+</head>
+
+<body style="margin: 0 ; background-color: antiquewhite;">
+    <div class="display">
+        <img src="" id="bulb" height="100px">
+
+        <h1 id="output"> Match</h1>
+    </div>
+
+    <div id="section-two" class="box" onclick="add()">
+        <h1>MI</h1>
+    </div>
+    <div id="section-one" class="box" onclick="sub()">
+        <h1>RCB</h1>
+    </div>
+
+
+</body>
+
+</html>

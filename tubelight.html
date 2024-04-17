@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+    <title>light game</title>
+    <link rel="icon" type="image/x-icon" href="./images/mobile_Phone.jpg" />
+
+    <style>
+        .box {
+            height: 60px;
+            width: 50vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            border-radius: 10px;
+            /* Add rounded corners */
+        }
+
+        #section-one {
+            background-color: lightblue;
+        }
+
+        #section-two {
+            background-color: lightcoral;
+        }
+
+        #section-three {
+            background-color: lightgreen;
+        }
+
+        .display {
+            width: 100vw;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 10px;
+            /* Add rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add shadow effect */
+        }
+
+        a {
+            font-size: 22px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .input-box {
+            height: 80px;
+            width: 50vw;
+            border-style: solid;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            background-color: lightslategray;
+            border-radius: 10px;
+            /* Add rounded corners */
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            font-size: 22px;
+            border: none;
+            /* Remove default input border */
+            outline: none;
+            /* Remove default input focus outline */
+            background-color: transparent;
+            /* Make input background transparent */
+        }
+
+        body {
+            background-color: aqua;
+        }
+
+        #bulb {
+            height: 170px;
+            /* Increase the height */
+            width: 170px;
+            /* Increase the width */
+            border-radius: 50%;
+            /* Make the bulb image circular */
+            transition: transform 0.3s ease;
+            /* Add smooth transition effect */
+        }
+
+        #output {
+            font-size: 24px;
+            /* Increase font size of output text */
+            margin-top: 10px;
+            /* Add some space above output text */
+        }
+
+        #output {
+            margin-top: 20px;
+            /* Adjust as needed */
+            font-size: 44px;
+        }
+    </style>
+
+    <script>
+        function practisoperator() {
+            let x = parseInt(document.getElementById("input-one").value);
+            let y = parseInt(document.getElementById("input-two").value);
+            let sum = x + y;
+            // grether than 12
+            let isCorrect = x > 12 && y > 12;
+
+            document.getElementById("output").innerHTML = isCorrect ? "True!" : "False!";
+            document.getElementById("output").style.color = isCorrect ? "green" : "red";
+
+            if (isCorrect) {
+                document.getElementById("bulb").src = "http://pluspng.com/img-png/light-bulb-png-light-bulb-png-file-png-image-1200.png";
+            } else {
+                document.getElementById("bulb").src = "https://tse1.mm.bing.net/th?id=OIP.gOuIirQ3d7LkqZb-6gKsbgHaL0&pid=Api&P=0&h=180";
+            }
+        }
+    </script>
+</head>
+
+<body style="margin: 0">
+    <h1
+        style="color: rgb(255, 16, 16); text-align: center; font-size: 65px; font-weight: 700; margin-top: 80px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Light Game </h1>
+    <div class="container">
+        <div class="display">
+            <img id="bulb" height="225px" width="200px">
+            <br>
+            <h1 id="output"></h1>
+        </div>
+        <div class="input-box" style="text-align: center;">
+            <input type="number" id="input-one" />
+        </div>
+        <div class="input-box">
+            <input type="number" id="input-two" />
+        </div>
+        <div id="section-one" class="box" onclick="practisoperator()">
+            <h1>see answer</h1>
+        </div>
+    </div>
+</body>
+
+</html>
