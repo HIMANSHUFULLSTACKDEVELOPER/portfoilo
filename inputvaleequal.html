@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Check</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: bisque;
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            width: 300px;
+            box-sizing: border-box;
+            font-size: 32px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 42px;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+    <script>
+        // JavaScript logic
+        function checkValues() {
+            let input1 = parseFloat(document.getElementById("input1").value);
+            let input2 = parseFloat(document.getElementById("input2").value);
+            let input3 = parseFloat(document.getElementById("input3").value);
+
+            if (input1 === input2) {
+                if (input2 === input3) {
+                    alert("All number are equal: " + input1);
+                } else {
+                    alert("First two number are equal, but the third one is not.");
+                }
+            } else {
+                alert("First two number are not equal.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 style="text-align: center; font-size: 42px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Equal Or Not</h1>
+        <br>
+        <input type="number" id="input1" placeholder="Enter number">
+        <input type="number" id="input2" placeholder="Enter number">
+        <input type="number" id="input3" placeholder="Enter number">
+        <br>
+        <br><br>
+        <button onclick="checkValues()">Check</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        /* main box */
+        .main-container {
+            width: 55vw;
+            height: 78vh;
+            margin-top: 50px;
+            margin-left: 500px;
+            border-radius: 264px;
+        }
+
+        /* top display box */
+        #greeting {
+            width: 92%;
+            height: 22%;
+            border-radius: 384px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 50px;
+            margin-right: 2px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            color: black;
+            background-color: rgb(128, 128, 128);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* bottom input box */
+        .bottom-container {
+            width: 97.8%;
+            height: 67%;
+            background-color: rgba(222, 215, 135, 0.733);
+
+            border-radius: 250px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 12px;
+            margin-right: 2px;
+        }
+
+        /* background styling */
+        body {
+            width: 100vw;
+            height: 90vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* button styling */
+        .button {
+            width: 44%;
+            height: 14%;
+            background-color: palegreen;
+            border-radius: 14px;
+            border-style: solid;
+            margin-top: 15px;
+            margin-left: 220px;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        .button:hover {
+            background-color: #21669f;
+        }
+
+        /* input field container */
+        .container {
+            width: 70%;
+            height: 10%;
+            font-size: 15px;
+            background-color: #ffb300;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        #numberInput {
+            font-size: 32px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 130px;
+        }
+    </style>
+    <script>
+        function displayGreeting() {
+            let timeInput = document.getElementById("numberInput").value;
+            let greetingMsg = "";
+            if (timeInput >= 1 && timeInput < 12) {
+                greetingMsg = "Good morning";
+            } else if (timeInput >= 12 && timeInput < 15) {
+                greetingMsg = "Good afternoon";
+            } else if (timeInput >= 15 && timeInput < 18) {
+                greetingMsg = "Good evening";
+            } else {
+                greetingMsg = "Good night";
+            }
+            document.getElementById("greeting").textContent = greetingMsg;
+        }
+    </script>
+
+</head>
+
+<body
+    style="background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);">
+    <h1
+    style="font-size: 44px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif black; border: 3PX solid white;height: 80PX;width: 370PX; text-align: center; background-color: aquamarine; box-shadow: 0PX 0PX 21PX rgb(178, 108, 108); border-radius: 40PX;margin-left: 770px;">
+    Time :</h1> <br> 
+    <!-- main section -->
+    <div class="main-container">
+        <!-- display section -->
+        <div id="greeting"></div>
+        <!-- bottom section -->
+        <div class="bottom-container"><br><br>
+            <!-- input fiels -->
+            <input id="numberInput" type="number" class="container" placeholder="0"></input><br><br>
+            <!-- button section -->
+            <button class="button" onclick="displayGreeting()">SUBMIT</button><br>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
